@@ -6,40 +6,50 @@ import json
 import logging
 
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
-def clean_data (data : dict) -> list:
-    id : list = data['id']
-    question : list = data['question']
-    question_concept : list = data['question_concept']
-    choices : list = data['choices']
-    answerKey : list = data['answerKey']
+def clean_data(data: dict) -> list:
+    id: list = data["id"]
+    question: list = data["question"]
+    question_concept: list = data["question_concept"]
+    choices: list = data["choices"]
+    answerKey: list = data["answerKey"]
 
-    assert len(id) == len(question) == len(question_concept) == len(choices) == len(answerKey), "Length of all the lists are not same"
+    assert (
+        len(id)
+        == len(question)
+        == len(question_concept)
+        == len(choices)
+        == len(answerKey)
+    ), "Length of all the lists are not same"
 
     cleaned_data = []
 
     for i in range(len(id)):
-        labels = choices[i]['label']
-        texts = choices[i]['text']
+        labels = choices[i]["label"]
+        texts = choices[i]["text"]
 
-        assert labels == ['A', 'B', 'C', 'D', 'E'], "Labels are not as expected"
+        assert labels == ["A", "B", "C", "D", "E"], "Labels are not as expected"
 
         a, b, c, d, e = texts
 
-        cleaned_data.append({
-            "problem" : question[i],
-            "options" : {
-                "a" : a,
-                "b" : b,
-                "c" : c,
-                "d" : d,
-                "e" : e,
-            },
-            "gt" : answerKey[i],
-            "type" : "commonsense",
-        })
+        cleaned_data.append(
+            {
+                "problem": question[i],
+                "options": {
+                    "a": a,
+                    "b": b,
+                    "c": c,
+                    "d": d,
+                    "e": e,
+                },
+                "gt": answerKey[i],
+                "type": "commonsense",
+            }
+        )
 
     return cleaned_data
 

@@ -7,23 +7,33 @@ import logging
 import re
 
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
-def clean_data (data : dict) -> list:
-    problem : list = data['Problem']
-    rationale : list = data['Rationale']
-    options : list = data['options']
-    correct : list = data['correct']
-    annotated_formula : list = data['annotated_formula']
-    linear_formula : list = data['linear_formula']
-    category : list = data['category']
+def clean_data(data: dict) -> list:
+    problem: list = data["Problem"]
+    rationale: list = data["Rationale"]
+    options: list = data["options"]
+    correct: list = data["correct"]
+    annotated_formula: list = data["annotated_formula"]
+    linear_formula: list = data["linear_formula"]
+    category: list = data["category"]
 
-    assert len(problem) == len(rationale) == len(options) == len(correct) == len(annotated_formula) == len(linear_formula) == len(category), "Fields are not of same length"
+    assert (
+        len(problem)
+        == len(rationale)
+        == len(options)
+        == len(correct)
+        == len(annotated_formula)
+        == len(linear_formula)
+        == len(category)
+    ), "Fields are not of same length"
 
     cleaned_data = []
 
-    pattern = r'\)\s*([^,]+)(?:,|$)'
+    pattern = r"\)\s*([^,]+)(?:,|$)"
 
     for i in range(problem.__len__()):
         if options[i].count(")") != 5:
@@ -37,23 +47,25 @@ def clean_data (data : dict) -> list:
 
         a, b, c, d, e = choices
 
-        cleaned_data.append({
-            "problem" : problem[i],
-            "options" : {
-                "a" : a,
-                "b" : b,
-                "c" : c,
-                "d" : d,
-                "e" : e,
-            },
-            "gt" : correct[i],
-            "type" : "arithmetic",
-        })
+        cleaned_data.append(
+            {
+                "problem": problem[i],
+                "options": {
+                    "a": a,
+                    "b": b,
+                    "c": c,
+                    "d": d,
+                    "e": e,
+                },
+                "gt": correct[i],
+                "type": "arithmetic",
+            }
+        )
 
     return cleaned_data
 
 
-# The repository for math_qa contains custom code which must be executed to correctly load the dataset. 
+# The repository for math_qa contains custom code which must be executed to correctly load the dataset.
 # The repository content can be inspected at https://hf.co/datasets/math_qa.
 # Need to pass the argument `trust_remote_code=True` to allow custom code to be run.
 

@@ -8,29 +8,38 @@ import random
 
 random.seed(42)
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
-def clean_data (data : list) -> list:
+def clean_data(data: list) -> list:
     cleaned_data = []
 
     for sample in data:
-        choices = [sample['correct_answer'], sample['distractor1'], sample['distractor2'], sample['distractor3']]
+        choices = [
+            sample["correct_answer"],
+            sample["distractor1"],
+            sample["distractor2"],
+            sample["distractor3"],
+        ]
         random.shuffle(choices)
 
-        gt = choices.index(sample['correct_answer'])
+        gt = choices.index(sample["correct_answer"])
 
-        cleaned_data.append({
-            "problem" : sample['question'],
-            "options" : {
-                "a" : choices[0],
-                "b" : choices[1],
-                "c" : choices[2],
-                "d" : choices[3],
-            },
-            "gt" : chr(gt + 97),
-            "type" : "scientific",
-        })
+        cleaned_data.append(
+            {
+                "problem": sample["question"],
+                "options": {
+                    "a": choices[0],
+                    "b": choices[1],
+                    "c": choices[2],
+                    "d": choices[3],
+                },
+                "gt": chr(gt + 97),
+                "type": "scientific",
+            }
+        )
 
     return cleaned_data
 
@@ -38,7 +47,7 @@ def clean_data (data : list) -> list:
 source_data_path = "data/scientific reasoning/SciQ dataset-2 3/train.json"
 
 with open(source_data_path, "r") as f:
-    source_data : list = json.load(f)
+    source_data: list = json.load(f)
 
 logging.info(f"Length: {len(source_data)}")
 logging.info(f"Keys: {source_data[0].keys()}")

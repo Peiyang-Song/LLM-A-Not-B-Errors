@@ -10,32 +10,34 @@ import os
 import argparse
 
 
-API_KEY = os.getenv('OPENAI_API_KEY')
+API_KEY = os.getenv("OPENAI_API_KEY")
 if not API_KEY:
     raise ValueError("API key not found. Set the environment variable OPENAI_API_KEY.")
 
-openai.api_base = 'https://api.together.xyz'
+openai.api_base = "https://api.together.xyz"
 
 random.seed(42)
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
-parser = argparse.ArgumentParser(description='Script Parameters')
+parser = argparse.ArgumentParser(description="Script Parameters")
 
-parser.add_argument('--model_name', type=str, default='Qwen/Qwen1.5-72B-Chat')
-parser.add_argument('--dataset_name', type=str, default='arithmetic')
-parser.add_argument('--num_shot', type=int, default=100)
-parser.add_argument('--sample_size', type=int, default=80)
+parser.add_argument("--model_name", type=str, default="Qwen/Qwen1.5-72B-Chat")
+parser.add_argument("--dataset_name", type=str, default="arithmetic")
+parser.add_argument("--num_shot", type=int, default=100)
+parser.add_argument("--sample_size", type=int, default=80)
 
 args = parser.parse_args()
 
 
 dataset_paths = {
-    'arithmetic': "data/arithmetic reasoning/math_qa_processed.json",
-    'scientific': "data/scientific reasoning/SciQ_processed.json",
-    'causal': "data/causal reasoning/winogrande_processed.json",
-    'commonsense': "data/commonsense reasoning/commonsense_qa_processed.json"
+    "arithmetic": "data/arithmetic reasoning/math_qa_processed.json",
+    "scientific": "data/scientific reasoning/SciQ_processed.json",
+    "causal": "data/causal reasoning/winogrande_processed.json",
+    "commonsense": "data/commonsense reasoning/commonsense_qa_processed.json",
 }
 
 data_path = dataset_paths[args.dataset_name]
@@ -52,7 +54,7 @@ def get_response(prompt):
             model=args.model_name,
             messages=[{"role": "user", "content": prompt}],
             temperature=0,
-            api_key=API_KEY
+            api_key=API_KEY,
         )
     except Exception as e:
         logging.error(f"Error during API call: {e}")
@@ -61,14 +63,14 @@ def get_response(prompt):
             model=args.model_name,
             messages=[{"role": "user", "content": prompt}],
             temperature=0,
-            api_key=API_KEY
+            api_key=API_KEY,
         )
 
     return response.choices[0].message["content"]
 
 
 def construct_few_shot_examples(sample_data, count):
-    examples = 'Examples:\n\n'
+    examples = "Examples:\n\n"
 
     for sample in sample_data[:count]:
         examples += f"What is the answer for: Question<{sample['problem']}>\n"
@@ -90,16 +92,27 @@ def construct_question_prompt(data):
     return question
 
 
-data_refined = [entry for entry in data if len(entry['options']) == 5]
+data_refined = [entry for entry in data if len(entry["options"]) == 5]
 
-data_a = [entry for entry in data_refined if entry['gt'].lower() == 'a']
-data_b = [entry for entry in data_refined if entry['gt'].lower() == 'b']
-data_c = [entry for entry in data_refined if entry['gt'].lower() == 'c']
-data_d = [entry for entry in data_refined if entry['gt'].lower() == 'd']
-data_e = [entry for entry in data_refined if entry['gt'].lower() == 'e']
+data_a = [entry for entry in data_refined if entry["gt"].lower() == "a"]
+data_b = [entry for entry in data_refined if entry["gt"].lower() == "b"]
+data_c = [entry for entry in data_refined if entry["gt"].lower() == "c"]
+data_d = [entry for entry in data_refined if entry["gt"].lower() == "d"]
+data_e = [entry for entry in data_refined if entry["gt"].lower() == "e"]
 
-data_a_not_b = data_a[:args.num_shot // 4] + data_b[:args.num_shot // 4] + data_c[:args.num_shot // 4] + data_d[:args.num_shot // 4]
-data_original = data_a[:args.num_shot // 5] + data_b[:args.num_shot // 5] + data_c[:args.num_shot // 5] + data_d[:args.num_shot // 5] + data_e[:args.num_shot // 5]
+data_a_not_b = (
+    data_a[: args.num_shot // 4]
+    + data_b[: args.num_shot // 4]
+    + data_c[: args.num_shot // 4]
+    + data_d[: args.num_shot // 4]
+)
+data_original = (
+    data_a[: args.num_shot // 5]
+    + data_b[: args.num_shot // 5]
+    + data_c[: args.num_shot // 5]
+    + data_d[: args.num_shot // 5]
+    + data_e[: args.num_shot // 5]
+)
 
 logging.info(f"A-Not-B Data Length: {len(data_a_not_b)}")
 logging.info(f"Original Data Length: {len(data_original)}")
@@ -115,9 +128,9 @@ accuracy_a_not_b = 0
 accuracy_original = 0
 accuracy_no_examples = 0
 
-for entry in data_e[:args.sample_size]:
-    ground_truth = entry['gt']
-    assert ground_truth.lower() == 'e'
+for entry in data_e[: args.sample_size]:
+    ground_truth = entry["gt"]
+    assert ground_truth.lower() == "e"
 
     question_prompt = construct_question_prompt(entry)
 
@@ -133,11 +146,11 @@ for entry in data_e[:args.sample_size]:
     logging.info(f"A Not B Response: {response_a_not_b}")
     logging.info(f"No Examples Response: {response_no_examples}")
 
-    if response_original.strip().lower() == 'e':
+    if response_original.strip().lower() == "e":
         accuracy_original += 1
-    if response_a_not_b.strip().lower() == 'e':
+    if response_a_not_b.strip().lower() == "e":
         accuracy_a_not_b += 1
-    if response_no_examples.strip().lower() == 'e':
+    if response_no_examples.strip().lower() == "e":
         accuracy_no_examples += 1
 
 print(f"Accuracy Original: {accuracy_original / args.sample_size}")
