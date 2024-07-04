@@ -30,6 +30,10 @@ We welcome contributions. Please feel free to PR to add support for more LLMs, o
 
 * Feature requests and other suggestions are extremely welcome. Please feel free to start a discussion!
 
+## Code Formatting
+
+We use [black](https://github.com/psf/black) to format code in this repository. To format all code at once, simply run `black .` from the root.
+
 ## Citation
 
 If you find our work useful, please kindly cite our paper.
