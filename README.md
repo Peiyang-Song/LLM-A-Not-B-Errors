@@ -1,6 +1,6 @@
 # A-Not-B Errors in Pretrained Language Models
 
-This official repository holds code for the paper "In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-B Errors in Pretrained Language Models". We open source all code and results here under a [permissive MIT license](LICENSE), to encourage reproduction and further research exploration.
+This official repository holds code for the paper "**In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-B Errors in Pretrained Language Models**". We open source all code and results here under a [permissive MIT license](LICENSE), to encourage reproduction and further research exploration.
 
 <img width="977" alt="a-not-b-errors" src="https://github.com/Peiyang-Song/LLM-A-Not-B-Errors/assets/114432581/f6d8844a-da32-40f1-ad5a-bbe5e14bcfee">
 
@@ -20,7 +20,7 @@ All code in this repository is **directly runnable**.
 
 ## Contributions
 
-We welcome contributions. Please feel free to PR to add support for more LLMs, other reasoning tasks, or more. In the PR, please include a brief description and any additional information (extra setup steps required, results generated, credits to other works, etc.) you feel necessary to note.
+We **welcome contributions**. Please feel free to PR to add support for more LLMs, other reasoning tasks, or more. In the PR, please include a brief description and any additional information (extra setup steps required, results generated, credits to other works, etc.) you feel necessary to note.
 
 ## Getting in Touch
 
