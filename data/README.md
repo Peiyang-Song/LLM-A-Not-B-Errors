@@ -19,7 +19,7 @@ If you find our processed data useful or would like to use them in downstream re
 
 [1] Math QA:
 
-```tex
+```BibTeX
 @inproceedings{amini-etal-2019-mathqa,
     title = "{M}ath{QA}: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms",
     author = "Amini, Aida  and
@@ -44,7 +44,7 @@ If you find our processed data useful or would like to use them in downstream re
 
 [2] Winogrande:
 
-```tex
+```BibTeX
 @article{sakaguchi2019winogrande,
     title={WinoGrande: An Adversarial Winograd Schema Challenge at Scale},
     author={Sakaguchi, Keisuke and Bras, Ronan Le and Bhagavatula, Chandra and Choi, Yejin},
@@ -55,7 +55,7 @@ If you find our processed data useful or would like to use them in downstream re
 
 [3] Commonsense QA:
 
-```tex
+```BibTeX
 @inproceedings{talmor-etal-2019-commonsenseqa,
     title = "{C}ommonsense{QA}: A Question Answering Challenge Targeting Commonsense Knowledge",
     author = "Talmor, Alon  and
@@ -78,7 +78,7 @@ If you find our processed data useful or would like to use them in downstream re
 
 [4] SciQ:
 
-```tex
+```BibTeX
 @inproceedings{welbl-etal-2017-crowdsourcing,
     title = "Crowdsourcing Multiple Choice Science Questions",
     author = "Welbl, Johannes  and
