@@ -2,7 +2,7 @@
 
 This official repository holds code for the paper "**In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-B Errors in Pretrained Language Models**". We open source all code and results here under a [permissive MIT license](LICENSE), to encourage reproduction and further research exploration.
 
-<img width="977" alt="a-not-b-errors" src="https://github.com/Peiyang-Song/LLM-A-Not-B-Errors/assets/114432581/f6d8844a-da32-40f1-ad5a-bbe5e14bcfee">
+<img width="977" alt="a-not-b-errors" src="https://github.com/user-attachments/files/16986949/Cog_AnotB.pdf">
 
 ## Repo Structure
 
