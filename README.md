@@ -6,21 +6,23 @@ This official repository holds code for the paper "**In-Context Learning May Not
 
 ## Repo Structure
 
-* The [`data`](data) folder contains all our processed and binarized data for four representative reasoning tasks. For a detailed guide, please refer to the [README](data/README.md) under that directory.
+* The [`data`](data) directory contains all processed and binarized data for the four representative reasoning tasks studied in the paper. For a detailed walkthrough, please refer to the [README](data/README.md) under that directory.
 
-* The [`method`](method) folder contains our main code. Specifically:
+* The [`method`](method) directory contains our main code. Specifically:
 
-1) [`A_not_B.py`](method/A_not_B.py) generates the main experiment results in our paper.
-2) [`A_not_B_with_explanation.py`](method/A_not_B_with_explanation.py) generates a followup experiment result, investigating whether self-explanation and explicit reasoning processes can prevent LLMs from exhibiting A-Not-B errors.
-3) [`A_not_B_extra_options.py`](method/A_not_B_extra_options.py) generates another followup experiment result, investigating whether allowing for extra options in the MCQ problems can prevent LLMs from exhibiting A-Not-B errors.
+1) [`A_not_B.py`](method/A_not_B.py) generates the main experiment in our paper.
+2) [`A_not_B_with_explanation.py`](method/A_not_B_with_explanation.py) generates a followup experiment, investigating whether self-explanation and explicit reasoning processes can prevent LLMs from exhibiting A-Not-B errors.
+3) [`A_not_B_extra_options.py`](method/A_not_B_extra_options.py) generates another followup experiment, investigating whether allowing for extra options in the MCQA problems can prevent LLMs from exhibiting A-Not-B errors.
 
-* The [`util`](util) folder contains the code that processes and binarizes data. You may reuse these scripts to process your own datasets and run A-not-B investigations on other reasoning tasks.
+For detailed presentations and discussions of the results, please refer to corresponding sections in our paper.
+
+* The [`util`](util) folder contains the code that processes and binarizes data. You may reuse these scripts to process your own datasets and run A-not-B investigations on more reasoning tasks.
 
 All code in this repository is **directly runnable**.
 
 ## Contributions
 
-We **welcome contributions**. Please feel free to PR to add support for more LLMs, other reasoning tasks, or more. In the PR, please include a brief description and any additional information (extra setup steps required, results generated, credits to other works, etc.) you feel necessary to note.
+We **welcome contributions**. Please feel free to PR to add A-not-B investigations with other LLMs or reasoning tasks. In the PR, please include a brief description and any additional information (extra setup steps required, results generated, credits to other works, etc.) you feel necessary to note. For PRs powering other potential directions of improvement, please additionally add a short explanation of the motivation behind your PR. You are also encouraged to open a discussion and chat with the maintainers of this repo before taking actions, in order to minimize opportunity costs.
 
 ## Getting in Touch
 
