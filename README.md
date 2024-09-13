@@ -18,7 +18,7 @@ For detailed presentations and discussions of the results, please refer to corre
 
 * The [`util`](util) folder contains the code that processes and binarizes data. You may reuse these scripts to process your own datasets and run A-not-B investigations on more reasoning tasks.
 
-All code in this repository is **directly runnable**.
+All code in this repository is **directly runnable** after you install the (very few) extra pip dependencies in `requirements.txt`.
 
 ## Contributions
 
