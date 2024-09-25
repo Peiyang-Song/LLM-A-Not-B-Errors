@@ -1,6 +1,6 @@
 # A-Not-B Errors in Pretrained Language Models
 
-🚩**News**: Our paper is accepted to the Findings of Empirical Methods in Natural Language Processing (EMNLP) 2024. See you in Miami!
+🚩**News**: [Our paper](https://arxiv.org/abs/2409.15454) is accepted to the Findings of Empirical Methods in Natural Language Processing (EMNLP) 2024. See you in Miami!
 
 This official repository holds code for the paper "**In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-B Errors in Pretrained Language Models**". We open source all code and results here under a [permissive MIT license](LICENSE), to encourage reproduction and further research exploration.
 
@@ -40,6 +40,16 @@ We use [black](https://github.com/psf/black) to format code in this repository.
 
 ## Citation
 
-If you find our work useful, please kindly cite our paper.
+If you find our work useful, please kindly cite [our paper](https://arxiv.org/abs/2409.15454).
 
-[LINK TO BE POSTED]
+```tex
+@misc{han2024incontextlearningelicittrustworthy,
+      title={In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-B Errors in Pretrained Language Models}, 
+      author={Pengrui Han and Peiyang Song and Haofei Yu and Jiaxuan You},
+      year={2024},
+      eprint={2409.15454},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2409.15454}, 
+}
+```
