@@ -42,7 +42,7 @@ We use [black](https://github.com/psf/black) to format code in this repository.
 
 If you find our work useful, please kindly cite [our paper](https://arxiv.org/abs/2409.15454).
 
-```tex
+```bibtex
 @inproceedings{han-etal-2024-context,
     title = "In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-{B} Errors in Pretrained Language Models",
     author = "Han, Pengrui  and
@@ -60,7 +60,6 @@ If you find our work useful, please kindly cite [our paper](https://arxiv.org/ab
     url = "https://aclanthology.org/2024.findings-emnlp.322",
     doi = "10.18653/v1/2024.findings-emnlp.322",
     pages = "5624--5643",
-    abstract = "Recent advancements in artificial intelligence have led to the creation of highly capable large language models (LLMs) that can perform tasks in a human-like manner. However, LLMs exhibit only infant-level cognitive abilities in certain areas. One such area is the A-Not-B error, a phenomenon seen in infants where they repeat a previously rewarded behavior despite well-observed changed conditions. This highlights their lack of inhibitory control {--} the ability to stop a habitual or impulsive response. In our work, we design a text-based multi-choice QA scenario similar to the A-Not-B experimental settings to systematically test the inhibitory control abilities of LLMs. We found that state-of-the-art LLMs (like Llama3-8b) perform consistently well with in-context learning (ICL) but make errors and show a significant drop of as many as 83.3{\%} in reasoning tasks when the context changes trivially. This suggests that LLMs only have inhibitory control abilities on par with human infants in this regard, often failing to suppress the previously established response pattern during ICL.",
 }
 
 ```
