@@ -40,7 +40,7 @@ We use [black](https://github.com/psf/black) to format code in this repository.
 
 ## Citation
 
-If you find our work useful, please kindly cite [our paper](https://arxiv.org/abs/2409.15454).
+If you find our work useful, please kindly cite [our paper](https://aclanthology.org/2024.findings-emnlp.322/).
 
 ```bibtex
 @inproceedings{han-etal-2024-context,
@@ -61,5 +61,4 @@ If you find our work useful, please kindly cite [our paper](https://arxiv.org/ab
     doi = "10.18653/v1/2024.findings-emnlp.322",
     pages = "5624--5643",
 }
-
 ```
