@@ -36,11 +36,13 @@ We **welcome contributions**. Please feel free to PR to add A-not-B investigatio
 
 ## Code Formatting
 
-We use [black](https://github.com/psf/black) to format code in this repository.
+We use [black](https://github.com/psf/black) to format Python code in this repository.
 
 ## Citation
 
-If you find our work useful, please kindly cite [our paper](https://aclanthology.org/2024.findings-emnlp.322/).
+[In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-{B} Errors in Pretrained Language Models](https://aclanthology.org/2024.findings-emnlp.322/)  
+Findings of the Association for Computational Linguistics: EMNLP, 2024  
+[Pengrui Han](https://pengrui-han.github.io/), [Peiyang Song](https://peiyang-song.github.io/), [Haofei Yu](https://haofeiyu.me/), [Jiaxuan You](https://cs.stanford.edu/~jiaxuan/)  
 
 ```bibtex
 @inproceedings{han-etal-2024-context,
