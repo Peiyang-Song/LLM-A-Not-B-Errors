@@ -8,9 +8,9 @@ This official repository holds code for the paper "**In-Context Learning May Not
 
 ## Repo Structure
 
-* The [`data`](data) directory contains all processed and binarized data for the four representative reasoning tasks studied in the paper. For a detailed walkthrough, please refer to the [README](data/README.md) under that directory.
+* The [`data`](data) folder contains all processed and binarized data for the four representative reasoning tasks studied in the paper. For a detailed walkthrough, please refer to the [README](data/README.md) under that directory.
 
-* The [`method`](method) directory contains our main code. Specifically:
+* The [`method`](method) folder contains our main code. Specifically:
 
 1) [`A_not_B.py`](method/A_not_B.py) generates the main experiment in our paper.
 2) [`A_not_B_with_explanation.py`](method/A_not_B_with_explanation.py) generates a followup experiment, investigating whether self-explanation and explicit reasoning processes can prevent LLMs from exhibiting A-Not-B errors.
@@ -34,15 +34,12 @@ We **welcome contributions**. Please feel free to PR to add A-not-B investigatio
 
 * Feature requests and other suggestions are extremely welcome. Please feel free to start a discussion!
 
-## Code Formatting
-
-We use [black](https://github.com/psf/black) to format Python code in this repository.
-
 ## Citation
 
 [In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-{B} Errors in Pretrained Language Models](https://aclanthology.org/2024.findings-emnlp.322/)  
-Findings of the Association for Computational Linguistics: EMNLP, 2024  
-[Pengrui Han](https://pengrui-han.github.io/), [Peiyang Song](https://peiyang-song.github.io/), [Haofei Yu](https://haofeiyu.me/), [Jiaxuan You](https://cs.stanford.edu/~jiaxuan/)  
+Findings of the Association for Computational Linguistics: EMNLP 2024  
+[Pengrui Han](https://pengrui-han.github.io/)*, [Peiyang Song](https://peiyang-song.github.io/)*, [Haofei Yu](https://haofeiyu.me/), [Jiaxuan You](https://cs.stanford.edu/~jiaxuan/)  
+* Pengrui Han and Peiyang Song contributed equally to this work.
 
 ```bibtex
 @inproceedings{han-etal-2024-context,
