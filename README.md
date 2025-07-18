@@ -20,7 +20,7 @@ For detailed presentations and discussions of the results, please refer to corre
 
 * The [`util`](util) folder contains the code that processes and binarizes data. You may reuse these scripts to process your own datasets and run A-not-B investigations on more reasoning tasks.
 
-All code in this repository is **directly runnable** after you install the (very few) extra pip dependencies in `requirements.txt`.
+All code in this repository is **directly runnable** after you install the (very few) extra pip packages in `requirements.txt`.
 
 ## Contributions
 
@@ -32,7 +32,7 @@ We **welcome contributions**. Please feel free to PR to add A-not-B investigatio
 
 * To report a potential bug, please open an issue. In the issue, please include the exact steps to reproduce the error, and complete logs. The more details you provide, the better we will be able to help you.
 
-* Feature requests and other suggestions are extremely welcome. Please feel free to start a discussion!
+* Feature requests and other suggestions are warmly welcomed. Please feel free to start a discussion!
 
 ## Citation
 
