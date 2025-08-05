@@ -38,7 +38,7 @@ We **welcome contributions**. Please feel free to PR to add A-not-B investigatio
 
 [In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-{B} Errors in Pretrained Language Models](https://aclanthology.org/2024.findings-emnlp.322/)  
 Findings of the Association for Computational Linguistics: EMNLP 2024  
-[Pengrui Han](https://pengrui-han.github.io/)*, [Peiyang Song](https://peiyang-song.github.io/)*, [Haofei Yu](https://haofeiyu.me/), [Jiaxuan You](https://cs.stanford.edu/~jiaxuan/)  
+[Pengrui Han](https://pengrui-han.github.io/)\*, [Peiyang Song](https://peiyang-song.github.io/)\*, [Haofei Yu](https://haofeiyu.me/), [Jiaxuan You](https://cs.stanford.edu/~jiaxuan/)  
 * Pengrui Han and Peiyang Song contributed equally to this work.
 
 ```bibtex
