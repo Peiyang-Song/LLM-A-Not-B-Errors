@@ -1,6 +1,8 @@
 # A-Not-B Errors in Pretrained Language Models
 
-🚩**News**: [Our paper](https://aclanthology.org/2024.findings-emnlp.322/) is accepted to the Findings of Empirical Methods in Natural Language Processing (EMNLP) 2024. See you in Miami!
+🚩**News**: [Our work](https://aclanthology.org/2024.findings-emnlp.322/) is accepted to the Findings of Empirical Methods in Natural Language Processing (EMNLP) 2024. See you in Miami!
+
+🚩**News**: [Our full paper](https://arxiv.org/abs/2409.15454) is available on arXiv. Welcome to check out the details!
 
 This official repository holds code for the paper "**In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-B Errors in Pretrained Language Models**". We open source all code and results here under a permissive MIT license, to encourage reproduction and further research exploration.
 
