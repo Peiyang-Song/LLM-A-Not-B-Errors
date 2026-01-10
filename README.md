@@ -34,7 +34,7 @@ We **welcome contributions**. Please feel free to PR to add A-not-B investigatio
 
 * To report a potential bug, please open an issue. In the issue, please include the exact steps to reproduce the error, and complete logs. The more details you provide, the better we will be able to help you.
 
-* Feature requests and other suggestions are warmly welcomed. Please feel free to start a discussion!
+* Feature requests and other suggestions are warmly welcome. Please feel free to start a discussion!
 
 ## Citation
 
